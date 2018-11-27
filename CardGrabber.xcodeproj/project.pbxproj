@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		823BDB9621ADA01F00C29B64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823BDB9521ADA01F00C29B64 /* AppDelegate.swift */; };
-		823BDB9821ADA01F00C29B64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823BDB9721ADA01F00C29B64 /* ViewController.swift */; };
 		823BDB9B21ADA01F00C29B64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823BDB9921ADA01F00C29B64 /* Main.storyboard */; };
 		823BDB9D21ADA02000C29B64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823BDB9C21ADA02000C29B64 /* Assets.xcassets */; };
 		823BDBA021ADA02000C29B64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 823BDB9E21ADA02000C29B64 /* LaunchScreen.storyboard */; };
+		823BDBA821ADA1D000C29B64 /* CardFinderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823BDBA721ADA1D000C29B64 /* CardFinderController.swift */; };
+		823BDBAB21ADA1E600C29B64 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823BDBAA21ADA1E600C29B64 /* AVFoundation.framework */; };
+		823BDBAD21ADA1EC00C29B64 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 823BDBAC21ADA1EC00C29B64 /* Vision.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		823BDB9221ADA01F00C29B64 /* CardGrabber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardGrabber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		823BDB9521ADA01F00C29B64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		823BDB9721ADA01F00C29B64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		823BDB9A21ADA01F00C29B64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		823BDB9C21ADA02000C29B64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		823BDB9F21ADA02000C29B64 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		823BDBA121ADA02000C29B64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		823BDBA721ADA1D000C29B64 /* CardFinderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFinderController.swift; sourceTree = "<group>"; };
+		823BDBAA21ADA1E600C29B64 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		823BDBAC21ADA1EC00C29B64 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				823BDBAD21ADA1EC00C29B64 /* Vision.framework in Frameworks */,
+				823BDBAB21ADA1E600C29B64 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 			children = (
 				823BDB9421ADA01F00C29B64 /* CardGrabber */,
 				823BDB9321ADA01F00C29B64 /* Products */,
+				823BDBA921ADA1E600C29B64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +62,22 @@
 			isa = PBXGroup;
 			children = (
 				823BDB9521ADA01F00C29B64 /* AppDelegate.swift */,
-				823BDB9721ADA01F00C29B64 /* ViewController.swift */,
 				823BDB9921ADA01F00C29B64 /* Main.storyboard */,
 				823BDB9C21ADA02000C29B64 /* Assets.xcassets */,
 				823BDB9E21ADA02000C29B64 /* LaunchScreen.storyboard */,
 				823BDBA121ADA02000C29B64 /* Info.plist */,
+				823BDBA721ADA1D000C29B64 /* CardFinderController.swift */,
 			);
 			path = CardGrabber;
+			sourceTree = "<group>";
+		};
+		823BDBA921ADA1E600C29B64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				823BDBAC21ADA1EC00C29B64 /* Vision.framework */,
+				823BDBAA21ADA1E600C29B64 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +151,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				823BDB9821ADA01F00C29B64 /* ViewController.swift in Sources */,
 				823BDB9621ADA01F00C29B64 /* AppDelegate.swift in Sources */,
+				823BDBA821ADA1D000C29B64 /* CardFinderController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,15 +297,16 @@
 		823BDBA521ADA02000C29B64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K586X95NW5;
+				DEVELOPMENT_TEAM = 37EG32LGCB;
 				INFOPLIST_FILE = CardGrabber/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = NVM.CardGrabber;
+				PRODUCT_BUNDLE_IDENTIFIER = NVMT.CardGrabber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -299,15 +316,16 @@
 		823BDBA621ADA02000C29B64 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K586X95NW5;
+				DEVELOPMENT_TEAM = 37EG32LGCB;
 				INFOPLIST_FILE = CardGrabber/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = NVM.CardGrabber;
+				PRODUCT_BUNDLE_IDENTIFIER = NVMT.CardGrabber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
